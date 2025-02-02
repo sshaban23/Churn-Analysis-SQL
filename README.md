@@ -1,6 +1,6 @@
 # Churn SQL Analysis
 
-This is an Analysis on a telecom client that wanted to decrease their churn rates. 
+This is an Analysis on a telecom client that wanted to decrease their churn rates.
 
 A: QUESTION:
 
