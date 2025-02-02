@@ -57,21 +57,21 @@ B2: STATEMENT FOR THE ERD:
 B3: LOADING CSV DATA:
 
 
---command " "\\copy public.services 
+      --command " "\\copy public.services 
 
-FROM 'C:/LabFiles/Services.csv' 
+      FROM 'C:/LabFiles/Services.csv' 
 
-DELIMITER ',' CSV HEADER QUOTE '\"' ESCAPE '''';""
+      DELIMITER ',' CSV HEADER QUOTE '\"' ESCAPE '''';""
 
 
 C: SQL QUERY:
 
 
-SELECT churn, internetservice, contract_id, COUNT(internetservice)
-FROM customer
-INNER JOIN services ON customer.customer_id = services.customer_id
-WHERE churn = 'Yes' AND internetservice = 'DSL' AND contract_id = 1
-GROUP BY churn, internetservice, contract_id;
+      SELECT churn, internetservice, contract_id, COUNT(internetservice)
+      FROM customer
+      INNER JOIN services ON customer.customer_id = services.customer_id
+      WHERE churn = 'Yes' AND internetservice = 'DSL' AND contract_id = 1
+      GROUP BY churn, internetservice, contract_id;
 
 
 
